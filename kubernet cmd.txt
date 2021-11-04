@@ -1,0 +1,24 @@
+
+shumwor@devops-trainee-worku:~/hello-app$ history
+    1  git clone http://git.gebeya.com/devops/hello-app.git
+    2  cd hello-app
+    3  docker build -t gcr.io/devops-trainee-worku/hello-app:v1 .
+    4  docker images
+    5  gcloud docker -- push gcr.io/devops-trainee-worku/hello-app:v1
+    6  kubectl run hello-web --image=gcr.io/devops-trainee-worku/hello-app:v1 --port 8080
+    7  kubectl get pods
+    8  kubectlexpose deployment hello-web --type=LoadBalancer --port 80 --target-port 8080
+    9  kubectl expose deployment hello-web --type=LoadBalancer --port 80 --target-port 8080
+   10  kubectl get service
+   11  kubectl scale deployment hello-web --replicas=3
+   12  kubectl get pods
+   13  docker build -t gcr.io/devops-trainee-worku/hello-app:v2
+   14  docker build -t gcr.io/devops-trainee-worku/hello-app:v2 .
+   15  gcloud docker -- push gcr.io/devops-trainee-worku/hello-app:v2
+   16  kubectl get deployment hello-web
+   17  kubectl get pod
+   18  kubectl set image deployment/hello-web hello-web=gcr.io/devops-trainee-worku/hello-app:v2
+   19  kubectl  get deployment hello-web
+   20  kubectl get pod
+   21  kubectl  get deployment hello-web
+   22  history
